@@ -1,4 +1,4 @@
-//const getComponentFunctions = require('./getComponentFunctions')
+// const getComponentFunctions = require('./getComponentFunctions')
 
 describe('#getComponentFunctions()', () => {
   /* Why? */
