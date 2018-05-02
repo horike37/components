@@ -1,4 +1,5 @@
 type: eventgateway
+version: 0.0.1
 
 inputTypes:
   event:

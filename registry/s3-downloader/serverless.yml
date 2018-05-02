@@ -1,5 +1,6 @@
 # TODO: make this more reusable
 type: s3-downloader
+version: 0.0.1
 
 inputTypes:
   name:

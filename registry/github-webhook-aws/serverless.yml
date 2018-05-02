@@ -1,4 +1,5 @@
 type: github-webhook-aws
+version: 0.0.1
 
 inputTypes:
   function:

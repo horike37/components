@@ -1,4 +1,5 @@
 type: aws-iam-role
+version: 0.0.1
 
 inputTypes:
   name:

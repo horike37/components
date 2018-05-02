@@ -1,5 +1,6 @@
 # TODO: Make this more reusable
 type: s3-uploader
+version: 0.0.1
 
 inputTypes:
   name:

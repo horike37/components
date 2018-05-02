@@ -1,4 +1,5 @@
 type: aws-cloudfront
+version: 0.0.1
 
 inputTypes:
   name:

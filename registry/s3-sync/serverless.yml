@@ -1,4 +1,5 @@
 type: s3-sync
+version: 0.0.1
 
 inputTypes:
   contentPath:

@@ -1,4 +1,5 @@
 type: aws-dynamodb
+version: 0.0.1
 
 inputTypes:
   region:
