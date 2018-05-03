@@ -15,6 +15,8 @@
     "components": "./bin/components"
   },
   "scripts": {
+    "build": "./scripts/build",
+    "build:components": "node ./scripts/build-components.js",
     "cleanse": "node ./scripts/cleanse.js",
     "components": "./bin/components",
     "lint": "eslint . --cache",
@@ -23,7 +25,8 @@
     "test:appveyor": "jest --testPathPattern=\"bin|examples|registry|src\" --colors --forceExit",
     "docs": "node ./scripts/doc-gen.js",
     "postinstall": "node ./scripts/postinstall.js",
-    "prepublishOnly": "node ./scripts/prepublish.js"
+    "prepublishOnly": "node ./scripts/prepublish.js",
+    "watch": "./scripts/watch"
   },
   "dependencies": {
     "@octokit/rest": "^14.0.5",
@@ -32,6 +35,7 @@
     "archiver": "^2.1.1",
     "aws-sdk": "^2.214.1",
     "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
     "bluebird": "^3.5.1",
     "chalk": "^2.3.2",
     "concordance": "^3.0.0",
@@ -55,7 +59,11 @@
   },
   "devDependencies": {
     "adm-zip": "^0.4.9",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-jest": "^22.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -72,13 +80,7 @@
     "collectCoverage": true
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write --single-quote --trailing-comma es5",
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": ["prettier --write --single-quote --trailing-comma es5", "eslint --fix", "git add"]
   },
-  "pre-commit": [
-    "lint:staged"
-  ]
+  "pre-commit": ["lint:staged"]
 }

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+rm -rf dist
+mkdir -p dist
+rsync -avz --exclude *.js --exclude node_modules src/ dist/
+babel src -d dist --source-maps --ignore **/*.test.js
+
+# build all the components in the registry
+npm run build:components
